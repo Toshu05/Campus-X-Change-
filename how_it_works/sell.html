@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How it works — Sell an item on CampusXchange</title>
+<meta name="description" content="Selling on CampusXchange is quick, safe and made for students. Add photos, fill in details, review and publish your listing in minutes." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="sell_style.css" />
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#"><span class="brand__mark">CX</span> CampusXchange</a>
+    <nav class="nav">
+      <a href="#">Marketplace</a>
+      <a href="#">Communities</a>
+      <a href="#how" class="is-active">How it works</a>
+      <a href="#">For Students</a>
+    </nav>
+    <div class="header__right">
+      <span class="city" data-ico="pin">Bengaluru <span data-ico="chevron"></span></span>
+      <button class="iconbtn" aria-label="Messages" data-ico="chat"></button>
+      <button class="iconbtn" aria-label="Notifications" data-ico="bell"></button>
+      <span class="avatar"><span>A</span><span data-ico="chevron"></span></span>
+      <button class="iconbtn burger" aria-label="Menu" data-ico="menu"></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="howpanel" id="how">
+    <h1>How it works</h1>
+    <p class="howpanel__lead">Selling on CampusXchange is quick, safe and made for students.</p>
+
+    <div class="steps" id="steps"></div>
+
+    <div class="safebar">
+      <span class="safebar__ico" data-ico="shield"></span>
+      <div>
+        <strong>Safe. Smart. Student-first.</strong>
+        <p>We verify students and keep our community safe. Never share personal details or make advance payments.</p>
+      </div>
+      <button class="btn btn--outline btn--sm">Safety Tips <span data-ico="arrow"></span></button>
+    </div>
+  </section>
+
+  <!-- ================= LIST YOUR ITEM ================= -->
+  <section>
+    <p class="eyebrow">Ready to sell?</p>
+    <div class="listhead">
+      <div>
+        <h2>List your item in minutes.</h2>
+        <p>Reach students across Bengaluru and sell what you no longer need.</p>
+      </div>
+      <button class="btn btn--outline" id="saveDraft"><span data-ico="draft"></span> Save draft</button>
+    </div>
+
+    <div class="sell">
+      <!-- ---------- FORM ---------- -->
+      <form class="card" id="sellForm" novalidate>
+        <!-- 1. photos -->
+        <div class="block">
+          <h3 class="block__title">1. Add photos <span>(up to 6)</span></h3>
+          <p class="block__hint">Good photos get more attention!</p>
+          <div class="photos" id="photos"></div>
+        </div>
+
+        <!-- 2. details -->
+        <div class="block">
+          <h3 class="block__title">2. Item details</h3>
+          <div class="grid2">
+            <div class="field">
+              <label for="title">Title of your item <span class="req">*</span></label>
+              <input class="input" id="title" value="Study Table with Chair" placeholder="e.g. Study table with chair" />
+            </div>
+            <div class="field">
+              <label for="category">Category <span class="req">*</span></label>
+              <select class="select" id="category">
+                <option>Furniture</option><option>Books &amp; Notes</option><option>Electronics</option>
+                <option>Cycles &amp; Vehicles</option><option>Room Essentials</option><option>Sports &amp; Fitness</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label>Quality / Condition <span class="req">*</span></label>
+              <div class="segment" id="condition">
+                <button type="button" class="is-on">Like new</button>
+                <button type="button">Good</button>
+                <button type="button">Barely used</button>
+                <button type="button">Used</button>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <label for="desc">Description <span class="req">*</span></label>
+              <textarea class="textarea" id="desc" maxlength="500" placeholder="Describe your item honestly…">Sturdy wooden study table with a comfortable chair.
+Comes with one drawer and a small shelf for books.
+Well maintained, perfect for students.</textarea>
+              <div class="counter"><span id="descCount">0</span>/500</div>
+            </div>
+
+            <div class="field">
+              <label for="price">Price (&#8377;) <span class="req">*</span></label>
+              <input class="input" id="price" inputmode="numeric" value="1700" placeholder="0" />
+            </div>
+            <div class="field">
+              <label>Negotiable</label>
+              <label class="check"><input type="checkbox" id="negotiable" checked /><i data-ico="tick"></i> Price is negotiable</label>
+            </div>
+
+            <div class="field">
+              <label for="area">Area / Location <span class="req">*</span></label>
+              <select class="select" id="area">
+                <option>HSR Layout</option><option>Koramangala</option><option>Indiranagar</option>
+                <option>Jayanagar</option><option>Whitefield</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="city">City <span class="req">*</span></label>
+              <select class="select" id="city"><option>Bengaluru</option><option>Hyderabad</option><option>Pune</option><option>Delhi NCR</option></select>
+            </div>
+
+            <div class="field">
+              <label>Additional details <span class="opt">(optional)</span></label>
+              <div class="checkrow">
+                <label class="check"><input type="checkbox" checked /><i data-ico="tick"></i> Delivery available</label>
+                <label class="check"><input type="checkbox" checked /><i data-ico="tick"></i> Can be picked up</label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="brand">Brand <span class="opt">(if any)</span></label>
+              <input class="input" id="brand" value="Nilkamal" placeholder="Brand name" />
+            </div>
+          </div>
+
+          <div class="note">
+            <span class="icon" data-ico="info"></span>
+            <span>Be honest about the condition of your item. It builds trust and helps you sell faster.</span>
+          </div>
+        </div>
+
+        <!-- 3. preferences -->
+        <div class="block">
+          <h3 class="block__title">3. Listing preferences</h3>
+          <p class="block__hint">Choose how you want to list your item.</p>
+          <div class="radios" id="prefs">
+            <label class="radio is-on">
+              <input type="radio" name="pref" checked /><em></em>
+              <span><strong>Publish now</strong><small>Make your listing visible to everyone immediately.</small></span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="pref" /><em></em>
+              <span><strong>Schedule for later</strong><small>Choose a date and time to publish your listing.</small></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="submit">
+          <button class="btn btn--green btn--block" type="submit">Review &amp; publish <span data-ico="arrow-w"></span></button>
+          <p class="terms">By publishing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Community Guidelines</a>.</p>
+        </div>
+      </form>
+
+      <!-- ---------- SIDEBAR ---------- -->
+      <aside class="side">
+        <div class="card card--pad">
+          <h3 class="side__title">Preview</h3>
+          <p class="side__hint">How your listing will appear</p>
+          <div class="preview__img">
+            <img id="pvImage" alt="Listing preview" />
+            <button class="heart" id="heart" type="button" aria-label="Save listing" data-ico="heart"></button>
+          </div>
+          <div class="thumbs" id="pvThumbs"></div>
+          <h4 class="pv-title" id="pvTitle">Study Table with Chair</h4>
+          <div class="pv-price">
+            <strong id="pvPrice">&#8377;1,700</strong>
+            <span class="tag tag--green" id="pvNeg">Negotiable</span>
+          </div>
+          <div><span class="tag tag--blue" id="pvCond">Like new</span></div>
+          <p class="pv-meta" id="pvMeta">Furniture &middot; HSR Layout, Bengaluru</p>
+          <p class="pv-desc" id="pvDesc"></p>
+          <div class="pv-foot">
+            <span>Just now</span>
+            <span><span class="icon" data-ico="eye"></span> 12 views</span>
+          </div>
+        </div>
+
+        <div class="card card--pad">
+          <h3 class="side__title">Tips to sell faster</h3>
+          <div class="tips" id="tips"></div>
+        </div>
+
+        <div class="card card--pad help">
+          <h3 class="side__title">Need help?</h3>
+          <p>Check out our detailed guide on selling safely and smartly.</p>
+          <button class="btn btn--outline btn--sm" type="button">View selling guide <span data-ico="arrow"></span></button>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a class="brand" href="#"><span class="brand__mark">CX</span> CampusXchange</a>
+        <p>The local student marketplace.<br />Buy. Sell. Connect.</p>
+      </div>
+      <div><h4>Marketplace</h4><ul><li><a href="#">All Listings</a></li><li><a href="#">Popular</a></li><li><a href="#">New Arrivals</a></li></ul></div>
+      <div><h4>Communities</h4><ul><li><a href="#">All Communities</a></li><li><a href="#">My Communities</a></li><li><a href="#">Create a Group</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#">How it works</a></li><li><a href="#">Safety Tips</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div>
+        <h4>Follow us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" data-ico="instagram"></a>
+          <a href="#" aria-label="LinkedIn" data-ico="linkedin"></a>
+          <a href="#" aria-label="Twitter" data-ico="twitter"></a>
+          <a href="#" aria-label="YouTube" data-ico="youtube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2026 CampusXchange. All rights reserved.</span>
+      <nav><a href="#">Safety</a><a href="#">Privacy</a><a href="#">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="sell_js.js"></script>
+</body>
+</html>

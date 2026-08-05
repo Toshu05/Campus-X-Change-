@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CampusXchange — Student Marketplace & Communities</title>
+<meta name="description" content="Buy and sell student essentials near your campus and find hobby communities across colleges." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="home_style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">
+    <img src="../Pictures/log_ex.png" alt="CampusXchange Logo" class="logo-img">
+    <span>CampusXChange</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="../marketplace/mkp.html">Marketplace</a>
+      <a href="#communities">Communities</a>
+      <a href="#sell">How it works</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    <div class="header-right">
+      <span class="city-pill" id="citySelect">⌖ Ghaziabad</span>
+      <a class="btn btn-ghost btn-sm" href="#sell">Sell your stuff</a>
+      <a class="btn btn-primary btn-sm" href="../sign_up_login/login.html">Join campusXchange</a>
+      <a  class="user-icon" id="userIcon">
+      <i class="fa-regular fa-circle-user"></i>
+      </a>
+      <div class="user-dropdown" id="userDropdown">
+
+        <div class="dropdown-header">
+            <h4>Toshu Pandey</h4>
+            <p>ABES Engineering College</p>
+        </div>
+
+        <hr>
+
+        <a href="profile.html"><i class="fa-regular fa-user"></i> My Profile</a>
+        <a href="listings.html"><i class="fa-solid fa-box"></i> My Listings</a>
+        <a href="orders.html"><i class="fa-solid fa-cart-shopping"></i> My Orders</a>
+        <a href="wishlist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        <a href="messages.html"><i class="fa-regular fa-message"></i> Messages</a>
+        <a href="communities.html"><i class="fa-solid fa-users"></i> Communities</a>
+        <a href="notifications.html"><i class="fa-regular fa-bell"></i> Notifications</a>
+        <a href="change-campus.html"><i class="fa-solid fa-location-dot"></i> Change Campus</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+        <a href="help.html"><i class="fa-regular fa-circle-question"></i> Help</a>
+
+        <hr>
+
+        <a href="logout.html" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">— The local student marketplace</p>
+      <h1><span>Buy what you need.</span><span>Sell what you don't.</span><span>Find your college community.</span></h1>
+      <p>Affordable essentials from students near your campus—plus hobby groups that make a new city feel like home.</p>
+      <form class="searchbar" id="searchForm">
+        <span>⌕</span>
+        <input id="searchInput" placeholder="Search books, cycles, study tables…" aria-label="Search listings" />
+        <select id="citySelect" class="city-dropdown">
+        <option value="Ghaziabad">📍 Ghaziabad</option>
+        <option value="Delhi">📍 Delhi</option>
+        <option value="Mumbai">📍 Mumbai</option>
+        <option value="Pune">📍 Pune</option>
+        <option value="Hyderabad">📍 Hyderabad</option>
+        <option value="Chennai">📍 Chennai</option>
+        <option value="Kolkata">📍 Kolkata</option>
+        <option value="Lucknow">📍 Lucknow</option>
+        <option value="Noida">📍 Noida</option>
+        <option value="Bengaluru">📍 Bengaluru</option>
+        </select>
+        <button class="btn btn-primary btn-sm" type="submit">Explore</button>
+      </form>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#marketplace">Explore items near you →</a>
+        <a class="btn btn-ghost" href="#sell">Sell an item</a>
+      </div>
+      <div class="hero-points">
+        <span class="dot">Local pickup</span>
+        <span class="dot">Verified students</span>
+        <span class="dot">Communities across campuses</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80" alt="Student walking with books near campus" />
+      <div class="float-card">
+        <div class="float-head"><span>Fresh near Christ University</span><span>09:42</span></div>
+        <div class="float-body">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=200&q=80" alt="Study table and chair set" />
+          <div>
+            <div class="float-title">Study table + chair set</div>
+            <div class="float-meta">₹1,700 · Pickup today</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Browse smarter</p>
+        <h2>What are you looking for?</h2>
+      </div>
+      <p class="section-note">Useful things, ready for student life.</p>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- MARKETPLACE -->
+<section class="section" id="marketplace" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Bengaluru marketplace</p>
+        <h2>Popular near you</h2>
+      </div>
+      <a class="link-arrow" href="#">View all listings →</a>
+    </div>
+    <div class="listing-grid" id="listingGrid"></div>
+  </div>
+</section>
+
+<!-- TRENDING -->
+<section class="section trending" id="trending">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Move in smarter</p>
+        <h2>Trending stuff for new students</h2>
+      </div>
+      <p class="section-note">The practical things students are picking up before campus begins.</p>
+    </div>
+    <div class="trend-grid">
+      <article class="starter">
+        <div class="starter-copy">
+          <p class="eyebrow">New student starter pack</p>
+          <h3>Your hostel starter list, sorted.</h3>
+          <p>Save time and your budget with the useful basics students most often forget.</p>
+          <ul class="checks">
+            <li><span class="check-icon">✓</span> Bucket + mug</li>
+            <li><span class="check-icon">✓</span> Desk lamp</li>
+            <li><span class="check-icon">✓</span> Bedsheet set</li>
+            <li><span class="check-icon">✓</span> Extension board</li>
+            <li><span class="check-icon">✓</span> Laundry bag</li>
+            <li><span class="check-icon">✓</span> Electric kettle</li>
+          </ul>
+          <a class="btn btn-ghost" href="../marketplace/mkp.html">Build my checklist</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=900&q=80" alt="Flat lay of hostel essentials" />
+      </article>
+      <div class="trend-side">
+        <article class="trend-card">
+          <div>
+            <p class="eyebrow">Under ₹1,000</p>
+            <h3>Study setup essentials</h3>
+            <p>Calculators, book bundles, lamps and laptop stands—priced for a strong first semester.</p>
+            <a class="link-arrow" href="#">Browse study picks →</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&q=80" alt="Stack of study books" />
+        </article>
+        <article class="trend-card">
+          <div>
+            <p class="eyebrow">Get around campus</p>
+            <h3>Cycles &amp; weekend gear</h3>
+            <p>Find a serviced cycle, a sturdy lock, or sport gear from students in your city.</p>
+            <a class="link-arrow" href="#">See active listings →</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=500&q=80" alt="Badminton rackets and shuttles" />
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELL -->
+<section class="section sell" id="sell">
+  <div class="wrap sell-grid">
+    <div>
+      <p class="eyebrow">Sell with confidence</p>
+      <h2>Your old college stuff can be someone's first-day essential.</h2>
+      <p>List books, furniture, cycles and hostel items in minutes. Reach nearby students who are ready to pick up.</p>
+      <a class="btn btn-primary" href="../how_it_works/sell.html">Start selling →</a>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h4>Snap &amp; upload</h4><p>Show the item clearly and share its real condition.</p></div>
+      <div class="step"><div class="num">02</div><h4>Set your price</h4><p>Add a campus pickup area so the right buyers find it.</p></div>
+      <div class="step"><div class="num">03</div><h4>Meet nearby</h4><p>Chat with interested students and mark it sold.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES -->
+<section class="section" id="communities">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Beyond the marketplace</p>
+        <h2>Find your people after class</h2>
+      </div>
+      <a class="link-arrow" href="#">Explore all communities →</a>
+    </div>
+    <div class="comm-grid">
+      <article class="comm">
+        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600&q=80" alt="Students playing badminton" />
+        <div class="comm-body">
+          <p class="kicker">Active this week</p>
+          <h3>Bengaluru Badminton Buddies</h3>
+          <p>Friendly doubles, open courts, and new players always welcome.</p>
+          <div class="comm-stats"><span>1,248 members</span><span>3 games this week</span></div>
+          <a class="btn btn-primary btn-sm" href="#">Join community</a>
+        </div>
+      </article>
+      <article class="comm">
+        <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=600&q=80" alt="Students playing board games together" />
+        <div class="comm-body">
+          <p class="kicker">Beginner-friendly</p>
+          <h3>Chess Club: Pune Campuses</h3>
+          <p>Casual games, rapid tournaments and a good excuse to meet people.</p>
+          <div class="comm-stats"><span>684 members</span><span>Sunday · 5:00 PM</span></div>
+          <a class="btn btn-primary btn-sm" href="#">View events</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Make your next campus move a little easier.</h2>
+        <p>Find the things you need, and the students you'll want to know.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="../communities/">Explore Your People</a>
+        <a class="btn btn-outline" href="#communities">Join a community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2025 <strong>CampusXchange</strong> · Useful things stay in student life</span>
+    <span class="footer-links"><a href="#marketplace">Marketplace</a><a href="#communities">Communities</a><a href="#">Safety</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

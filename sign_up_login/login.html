@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sign up or Login — CampusXchange Student Marketplace</title>
+<meta name="description" content="Create your CampusXchange account with your college ID and verify by OTP sent to your college email, or log in to your student marketplace." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="login_s.css" />
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-userplus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="8" r="3.5"/><path d="M3 20a7 7 0 0 1 12.2-4.7M18 14v5M15.5 16.5h5"/></symbol>
+  <symbol id="i-login" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9.5 12 4l9 5.5M5 10v9M19 10v9M9 19v-6M15 19v-6M3 19h18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 3.5h3l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 5.7 2 2 0 0 1 6 3.5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 3 10.5l7 2.5 2.5 7L21 3Z"/><path d="M10 13.5 21 3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 5 6v6c0 4.2 3 7.2 7 8.5 4-1.3 7-4.3 7-8.5V6l-7-2.5Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12.5 12.5 20 4 11.5V4h7.5L20 12.5Z"/><circle cx="8.2" cy="8.2" r="1.3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></symbol>
+  <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3Z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.5l-3.2-2.5c-.9.6-2 1-3.4 1a5.9 5.9 0 0 1-5.6-4H3.1v2.6A10 10 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.4 14a6 6 0 0 1 0-4V7.4H3.1a10 10 0 0 0 0 9.2L6.4 14Z"/><path fill="#EA4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.4L6.4 10A5.9 5.9 0 0 1 12 5.9Z"/></symbol>
+  <symbol id="i-ms" viewBox="0 0 24 24"><rect x="3" y="3" width="8.4" height="8.4" fill="#F25022"/><rect x="12.6" y="3" width="8.4" height="8.4" fill="#7FBA00"/><rect x="3" y="12.6" width="8.4" height="8.4" fill="#00A4EF"/><rect x="12.6" y="12.6" width="8.4" height="8.4" fill="#FFB900"/></symbol>
+</svg>
+
+<div class="shell">
+  <div class="shell-grid">
+    <!-- LEFT: brand -->
+    <aside class="brand-pane">
+      <div class="brand">
+          <img src="../Pictures/log_ex.png" class="logo-img">
+        <div class="brand-name">Campus<span>Xchange</span></div>
+      </div>
+      <h1 class="headline">Your campus.<span class="accent">Your marketplace.</span></h1>
+      <div class="rule"></div>
+      <p class="lede">Buy, sell and exchange anything on campus with students you can trust.</p>
+
+      <figure class="photo">
+        <img src="../Pictures/campus.jpg" alt="Students on a college campus courtyard" width="1024" height="768" />
+        <div class="badge">
+          <span class="badge-icon"><svg width="15" height="15"><use href="#i-check"/></svg></span>
+          <div>
+            <b>Secure &amp; Verified</b>
+            <p>Only verified students from your college.</p>
+          </div>
+        </div>
+      </figure>
+
+      <div class="perks">
+        <div class="perk">
+          <div class="perk-icon" style="color:var(--navy)"><svg width="24" height="24"><use href="#i-shield"/></svg></div>
+          <b>Verified Students</b><p>Only your college community</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon" style="color:var(--emerald)"><svg width="24" height="24"><use href="#i-bag"/></svg></div>
+          <b>Safe Marketplace</b><p>Trusted by students, for students</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon" style="color:var(--navy)"><svg width="24" height="24"><use href="#i-tag"/></svg></div>
+          <b>Great Deals</b><p>Save money. Sell what you don't need.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT: auth -->
+    <section class="auth-pane">
+      <div class="auth-card">
+        <div class="tabs" role="tablist" aria-label="Authentication">
+          <button class="tab" id="tab-signup" role="tab" aria-selected="true" aria-controls="pane-signup">
+            <svg width="20" height="20"><use href="#i-userplus"/></svg> Sign Up
+          </button>
+          <button class="tab" id="tab-login" role="tab" aria-selected="false" aria-controls="pane-login">
+            <svg width="20" height="20"><use href="#i-login"/></svg> Login
+          </button>
+        </div>
+
+        <div class="panes">
+          <!-- SIGN UP -->
+          <div class="pane active" id="pane-signup" role="tabpanel" aria-labelledby="tab-signup">
+            <h2>Create your account</h2>
+            <p class="sub">Join your college marketplace in seconds.</p>
+
+            <form id="signup-form" novalidate>
+              <div class="field"><span class="ico"><svg width="18" height="18"><use href="#i-user"/></svg></span>
+                <input id="su-name" name="name" placeholder="Full Name" autocomplete="name" /></div>
+              <div class="field"><span class="ico"><svg width="18" height="18"><use href="#i-bank"/></svg></span>
+                <input id="su-id" name="collegeId" placeholder="College ID" /></div>
+              <div class="field"><span class="ico"><svg width="18" height="18"><use href="#i-phone"/></svg></span>
+                <input id="su-phone" name="phone" inputmode="tel" placeholder="Phone Number" autocomplete="tel" /></div>
+              <p class="hint">We'll send OTP to your college email</p>
+              <div class="field"><span class="ico"><svg width="18" height="18"><use href="#i-mail"/></svg></span>
+                <input id="su-email" name="email" type="email" placeholder="College Email ID" autocomplete="email" /></div>
+              <p class="hint">Use your official college email ID</p>
+              <p class="err" id="su-err" role="alert"></p>
+              <button class="btn" type="submit" id="su-send">Send OTP <svg width="19" height="19"><use href="#i-send"/></svg></button>
+            </form>
+            <div class="otp-block hidden" id="su-otp-block">
+              <h3>Enter OTP</h3>
+              <p class="sub">Code sent to <strong id="su-otp-email"></strong></p>
+              <p class="demo" id="su-demo"></p>
+              <div class="otp" id="su-otp" data-otp>
+                <input maxlength="1" inputmode="numeric" aria-label="Digit 1" /><input maxlength="1" inputmode="numeric" aria-label="Digit 2" /><input maxlength="1" inputmode="numeric" aria-label="Digit 3" /><input maxlength="1" inputmode="numeric" aria-label="Digit 4" /><input maxlength="1" inputmode="numeric" aria-label="Digit 5" /><input maxlength="1" inputmode="numeric" aria-label="Digit 6" />
+              </div>
+              <div class="otp-meta">
+                <span class="timer"><svg width="17" height="17"><use href="#i-clock"/></svg><span id="su-timer">02:00</span></span>
+                <button class="resend" id="su-resend" type="button" disabled><svg width="17" height="17"><use href="#i-refresh"/></svg> Resend OTP</button>
+              </div>
+              <p class="err" id="su-otp-err" role="alert"></p>
+              <button class="btn" id="su-verify" type="button">Verify &amp; Create Account <svg width="19" height="19"><use href="#i-arrow"/></svg></button>
+              <p class="swap"><button type="button" data-edit="signup">Edit details</button></p>
+            </div>
+
+            <div class="hidden" id="su-done">
+              <div class="ok"><span class="badge-icon"><svg width="15" height="15"><use href="#i-check"/></svg></span>
+                <div><b>Account created</b><p id="su-done-msg"></p></div></div>
+              <button class="btn" type="button" id="su-goto-login">Continue to Login <svg width="19" height="19"><use href="#i-arrow"/></svg></button>
+            </div>
+
+            <div class="or">OR</div>
+            <p class="swap">Already have an account? <button type="button" data-goto="login">Login</button></p>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- LOGIN -->
+          <div class="pane" id="pane-login" role="tabpanel" aria-labelledby="tab-login">
+            <h2>Welcome back!</h2>
+            <p class="sub">Login to your account</p>
+
+            <form id="login-form" novalidate>
+              <div class="field"><span class="ico"><svg width="18" height="18"><use href="#i-user"/></svg></span>
+                <input id="li-name" name="name" placeholder="Full Name" autocomplete="name" /></div>
+              <div class="field"><span class="ico"><svg width="18" height="18"><use href="#i-bank"/></svg></span>
+                <input id="li-id" name="collegeId" placeholder="College ID" /></div>
+              <p class="err" id="li-err" role="alert"></p>
+
+              <div class="otp-block">
+                <h3>Enter OTP</h3>
+                <p class="sub">We'll send OTP to your college email</p>
+                <div class="otp locked" id="li-otp" data-otp>
+                  <input maxlength="1" inputmode="numeric" aria-label="Digit 1" disabled /><input maxlength="1" inputmode="numeric" aria-label="Digit 2" disabled /><input maxlength="1" inputmode="numeric" aria-label="Digit 3" disabled /><input maxlength="1" inputmode="numeric" aria-label="Digit 4" disabled /><input maxlength="1" inputmode="numeric" aria-label="Digit 5" disabled /><input maxlength="1" inputmode="numeric" aria-label="Digit 6" disabled />
+                </div>
+                <p class="demo hidden" id="li-demo"></p>
+                <div class="otp-meta">
+                  <span class="timer"><svg width="17" height="17"><use href="#i-clock"/></svg><span id="li-timer">02:00</span></span>
+                  <button class="resend" id="li-resend" type="button"><svg width="17" height="17"><use href="#i-refresh"/></svg> <span id="li-resend-label">Send OTP</span></button>
+                </div>
+                <button class="btn" type="submit" id="li-verify">Verify &amp; Login <svg width="19" height="19"><use href="#i-arrow"/></svg></button>
+              </div>
+            </form>
+
+            <div class="hidden" id="li-done">
+              <div class="ok"><span class="badge-icon"><svg width="15" height="15"><use href="#i-check"/></svg></span>
+                <div><b>Logged in</b><p id="li-done-msg"></p></div></div>
+              <button class="btn" type="button" id="li-signout">Sign out</button>
+            </div>
+            <div class="or">OR</div>
+            <p class="swap">New here? <button type="button" data-goto="signup">Sign up</button></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="foot">
+    <span><svg width="15" height="15" style="color:#94a3b8"><use href="#i-lock"/></svg> Your data is secure and will never be shared.</span>
+    <span>By continuing, you agree to our <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>.</span>
+  </footer>
+</div>
+
+<script src="login_j.js"></script>
+</body>
+</html>
