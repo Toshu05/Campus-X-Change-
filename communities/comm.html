@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Communities — CampusXchange | One city. Many campuses.</title>
+<meta name="description" content="Join student communities across colleges in Bengaluru. Discover interest groups, upcoming campus events and connect with students near you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="comm_css.css" />
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="../home_page/index.html">
+    <img src="../Pictures/log_ex.png" alt="CampusXchange Logo" class="logo-img">
+    </span> CampusXchange</a>
+    <nav class="nav">
+      <a href="../marketplace/mkp.html">Marketplace</a>
+      <a href="../communities/comm.html" class="is-active">Communities</a>
+      <a href="../how_it_works/sell.html">How it works</a>
+    </nav>
+    <div class="header__right">
+      <span class="city" data-ico="pin">Bengaluru <span data-ico="chevron"></span></span>
+      <button class="iconbtn" aria-label="Messages" data-ico="chat"></button>
+      <button class="iconbtn" aria-label="Notifications" data-ico="bell"></button>
+      <span class="avatar"><span>A</span><span data-ico="chevron"></span></span>
+      <button class="iconbtn burger" aria-label="Menu" data-ico="menu"></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__left">
+      <h1>One city. Many campuses.<em>One community.</em></h1>
+      <p class="hero__lead">Join communities across colleges in Bengaluru.<br />Connect, learn, compete and grow together.</p>
+
+      <form class="searchbar" id="searchForm">
+        <span data-ico="search"></span>
+        <input id="search" type="search" placeholder="Search communities, groups or topics..." aria-label="Search communities" />
+        <button class="btn btn--green btn--sm" type="submit">Search</button>
+      </form>
+
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="hero__art" id="heroArt">
+      <div class="hub">
+        <div class="hub__circle" data-ico="people"></div>
+        <b>Bengaluru</b>
+        <span>City Community</span>
+        <small>15K+ members</small>
+        <div class="hub__pill"><span data-ico="heart-on"></span> Stronger together</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BROWSE BY INTEREST ================= -->
+  <section class="sec" id="communities">
+    <div class="sechead"><div><h2>Browse by interest</h2></div></div>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <!-- ================= CITY COMMUNITIES ================= -->
+  <section class="sec">
+    <div class="sechead">
+      <div>
+        <h2>City Communities by Interest</h2>
+        <p>Explore city-wide communities across colleges.</p>
+      </div>
+      <a class="link" href="#">View all communities <span data-ico="arrow"></span></a>
+    </div>
+    <div class="rail">
+      <div class="rail__track rail__track--4" id="communityRail"></div>
+      <button class="rail__next" type="button" data-scroll="communityRail" aria-label="Next" data-ico="chevron-right"></button>
+    </div>
+  </section>
+
+  <!-- ================= EVENTS ================= -->
+  <section class="sec">
+    <div class="sechead">
+      <div>
+        <h2>Ongoing &amp; Upcoming Events</h2>
+        <p>Exciting events happening across communities in Bengaluru.</p>
+      </div>
+      <a class="link" href="#">View all events <span data-ico="arrow"></span></a>
+    </div>
+    <div class="eventwrap">
+      <div class="tabs" id="eventTabs">
+        <button type="button" class="is-on" data-tab="upcoming">Upcoming</button>
+        <button type="button" data-tab="ongoing">Ongoing</button>
+      </div>
+      <div class="rail">
+        <div class="rail__track rail__track--5" id="eventRail"></div>
+        <button class="rail__next" type="button" data-scroll="eventRail" aria-label="Next" data-ico="chevron-right"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACTIVITY ================= -->
+  <section class="sec">
+    <div class="sechead">
+      <div>
+        <h2>What&rsquo;s happening in the city?</h2>
+        <p>Recent activity from across communities.</p>
+      </div>
+    </div>
+    <div class="rail">
+      <div class="rail__track rail__track--5" id="activityRail"></div>
+    </div>
+  </section>
+
+  <!-- ================= GROUPS ================= -->
+  <section class="sec">
+    <div class="sechead">
+      <div>
+        <h2>Explore groups you&rsquo;ll love</h2>
+        <p>Popular groups across communities.</p>
+      </div>
+    </div>
+    <div class="rail">
+      <div class="rail__track rail__track--5" id="groupRail"></div>
+      <button class="rail__next" type="button" data-scroll="groupRail" aria-label="Next" data-ico="chevron-right"></button>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div>
+      <h2>Your interests. Your people. Your city.</h2>
+      <p>Be part of something bigger.</p>
+      <div class="cta__btns">
+        <button class="btn btn--green" type="button" data-toast="Group builder coming up next.">Create a group</button>
+        <button class="btn btn--ghost" type="button" data-toast="Thanks! We'll review your suggestion.">Suggest a community</button>
+      </div>
+    </div>
+    <div class="cta__art" id="ctaArt"></div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a class="brand" href="#"><span class="brand__mark">CX</span> CampusXchange</a>
+        <p>The local student marketplace.<br />Buy. Sell. Connect.</p>
+      </div>
+      <div><h4>Marketplace</h4><ul><li><a href="#">All Listings</a></li><li><a href="#">Popular</a></li><li><a href="#">New Arrivals</a></li></ul></div>
+      <div><h4>Communities</h4><ul><li><a href="#">All Communities</a></li><li><a href="#">My Communities</a></li><li><a href="#">Create a Group</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#">How it works</a></li><li><a href="#">Safety Tips</a></li><li><a href="#">Contact Us</a></li></ul></div>
+      <div>
+        <h4>Follow us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" data-ico="instagram"></a>
+          <a href="#" aria-label="LinkedIn" data-ico="linkedin"></a>
+          <a href="#" aria-label="Twitter" data-ico="twitter"></a>
+          <a href="#" aria-label="YouTube" data-ico="youtube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>&copy; 2026 CampusXchange. All rights reserved.</span>
+      <nav><a href="#">Safety</a><a href="#">Privacy</a><a href="#">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="comm_js.js"></script>
+</body>
+</html>
