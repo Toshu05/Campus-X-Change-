@@ -256,8 +256,8 @@ h2 { font-size: 28px; }
 }
 
 .logo-img {
-    width: 45px;
-    height: 45px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     border-radius:50%;
 }

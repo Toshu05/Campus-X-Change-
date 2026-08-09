@@ -208,15 +208,5 @@ $("#login-form").addEventListener("submit", (e) => {
   if (entered !== liSession.code) return (err.textContent = "Incorrect code. Please try again.");
   err.textContent = "";
   liSession.reset();
-  $("#login-form").classList.add("hidden");
-  $("#li-done").classList.remove("hidden");
-  $("#li-done-msg").textContent = `Welcome back, ${acc.name}. Verified via ${acc.email}.`;
-});
-
-$("#li-signout").addEventListener("click", () => {
-  liOtp.clear();
-  liOtp.setEnabled(false);
-  $("#li-demo").classList.add("hidden");
-  $("#li-done").classList.add("hidden");
-  $("#login-form").classList.remove("hidden");
+  window.location.href = "../home_page/index.html";
 });

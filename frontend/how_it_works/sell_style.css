@@ -255,8 +255,8 @@ label { font-size: 12px; font-weight: 700; color: var(--navy); }
   .segment button { flex: 1; padding: 11px 8px; }
 }
 .logo-img {
-    width: 45px;
-    height: 45px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     border-radius:50%;
 }
